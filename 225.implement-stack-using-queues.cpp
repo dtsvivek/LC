@@ -71,25 +71,34 @@
 
 // @lc code=start
 class MyStack {
+private:
+    #include <queue>
+    queue<int> in,out;
 public:
     MyStack() {
         
     }
     
     void push(int x) {
-        
+        in.push(x);
+        for(int i = 0;i<in.size()-1;i++){
+            in.push(in.front());
+            in.pop();
+        }
     }
     
     int pop() {
-        return 0;
+        int hold = in.front();
+        in.pop();
+        return hold;
     }
     
     int top() {
-        return 0;
+        return in.front();
     }
     
     bool empty() {
-        return true;
+        return in.empty();
     }
 };
 
