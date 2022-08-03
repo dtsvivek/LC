@@ -3,6 +3,7 @@
         "vector": "cpp",
         "stack": "cpp",
         "bitset": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "iostream": "cpp"
     }
 }
